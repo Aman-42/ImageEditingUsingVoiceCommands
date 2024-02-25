@@ -1,70 +1,57 @@
-<div align="center">
-  <h1>ezEdit</h1>
-  <p>
-    <strong>Enjoy hands-free voice editing</strong>
-  </p>
+# ezEdit: Hands-Free Photo Editing with Voice Commands
 
-ezEdit Empower Individuals with Hands-Free Photo Editing via voice
-</div>
+## Introduction
 
+ezEdit is an innovative tool that empowers users to edit photos using voice commands, eliminating the need for manual input. This hands-free approach streamlines the editing process, making it more accessible and efficient for individuals.
 
-# Features
+## Features
 
-- **Completely voice-based**
-- **Load any image directly from any folder**
-- **Change Brightness of image**
-- **Change Saturation of image**
-- **Rotate the image flexibly**
-- **Change contrast of image**
-- **Sharpen the image**
-- **blur the image**
-- **Save the image**
+- **Voice-Based Editing**: Perform all editing tasks using voice commands.
+- **Flexible Image Loading**: Load images from any folder on your computer.
+- **Adjust Brightness**: Modify the brightness of your images.
+- **Adjust Saturation**: Change the saturation levels of your images.
+- **Rotate Images**: Rotate images to desired angles.
+- **Adjust Contrast**: Enhance or reduce the contrast of your images.
+- **Sharpen Images**: Improve the sharpness of your images.
+- **Blur Images**: Apply blur effects to your images.
+- **Save Edited Images**: Save your edited images with ease.
 
-# Local installation
+## Local Installation
 
-1. Clone the repository
+1. **Clone the Repository**: Begin by cloning the ezEdit repository to your local machine.
 
-  First, you need to clone the repository
+2. **Update File Paths**: In the `ezEdit.py` file, update all file paths to match the absolute paths on your computer.
 
-  ```
-  git clone https://github.com/shivam-0109/ezEdit.git
-  ```
+3. **Install Dependencies**: Install the necessary dependencies using the following command:
 
-2. Change Path
+   ```
+   pip install tk flask pygame Pillow SpeechRecognition pocketsphinx pynput pyaudio pyttsx3 nltk keyboard tkfontchooser
+   ```
 
-Change all the directories from ```C:/Users/singh/Downloads/Image-Editing-Using-Voice-Commands-1/elements2.0Images/xyz.png``` in  `ezEdit.py` to the absolute path in your local computer.
+4. **Make a Registry Entry**: Create a registry entry to enable the "Edit With ezEdit" option in the context menu for images. Follow these steps:
 
-
-3. Install Dependencies
-
-Install the project's dependencies:
-
-```
-pip install tk flask pygame Pillow SpeechRecognition pocketsphinx pynput pyaudio pyttsx3 nltk keyboard tkfontchooser
-```
-
-4. Make a Registry Entry .
-
-    i)  Click on `windows key + r` and type `regedit` and click ok.
+   i) Press `Windows key + R` and type `regedit`, then click OK.
    
-    ii) Go to `HKEY_CLASSES_ROOT\*\shell` -> Right-click on the `shell` key, choose `New > Key` and set the name to "Edit With ezEdit".  
-  
-    iii) Right-click on the `key -> New > Key` .  
-  
-    iv)  Name it `command`   
-  
-    v) Set the value to the following command, replacing ```C:\Path\To\Your\Python\python.exe``` and ```C:\Path\To\Your\Script\myscript.py``` with your Python executable and script path:
-    ```"C:\Path\To\Your\Python\python.exe" "C:\Path\To\Your\Script\ezEdit.py```
-  
-
-5) Right-click on any image -> Click on "Edit With ezEdit".
+   ii) Navigate to `HKEY_CLASSES_ROOT\*\shell` and create a new key named "Edit With ezEdit".
    
-7) The program will be up and running now.
+   iii) Inside the "Edit With ezEdit" key, create another key named "command".
+   
+   iv) Set the value of the "command" key to the following command, replacing `C:\Path\To\Your\Python\python.exe` and `C:\Path\To\Your\Script\ezEdit.py` with your Python executable and script path:
+   
+   ```
+   "C:\Path\To\Your\Python\python.exe" "C:\Path\To\Your\Script\ezEdit.py"
+   ```
 
+5. **Edit Images**: Right-click on any image and select "Edit With ezEdit" to launch the program.
 
-# Contributors
+6. **Start Editing**: The ezEdit program will be ready for use, allowing you to edit images using voice commands.
 
-* Hardik Malani
-* Shivam Kumar Singh
-* Abilaash S
-* Paras Atal
+## Contributors
+
+- Aman Verma
+- Dev Sarode
+- Gourav Kothari
+
+## Conclusion
+
+ezEdit is a user-friendly tool that simplifies photo editing through voice commands, making it accessible to a wider audience. Its intuitive interface and powerful features make it a valuable addition to any photo editing toolkit.
